@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahabharata: A Data-Driven Analysis</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Set the Inter font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using a parchment-like background color */
+            background-color: #fdf5e6; 
+        }
+        /* Custom list styles */
+        .project-bullets li {
+            position: relative;
+            padding-left: 1.75rem; /* Space for the icon */
+            margin-bottom: 1rem;
+        }
+        .project-bullets li::before {
+            content: '✓'; /* Checkmark icon */
+            position: absolute;
+            left: 0;
+            top: 0.15rem;
+            color: #4B0082; /* Royal Purple */
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="min-h-screen w-full flex flex-col items-center p-4 md:p-8">
+        
+        <!-- Main Title -->
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-6" style="color: #4B0082;">
+            Mahabharata: A Data-Driven Analysis of Influence, Allegiance, and Fate
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-lg text-gray-700 text-center mb-10 max-w-3xl">
+            A portfolio project showcasing end-to-end data analysis, modeling, and dashboard design in Power BI.
+        </p>
+
+        <!-- Video Walkthrough Section -->
+        <!-- 
+          CHANGE: I've made the container narrower (max-w-3xl) so it doesn't feel 
+          so wide and "horizontal". This will make it look taller.
+        -->
+        <div class="w-full max-w-3xl bg-white rounded-lg shadow-2xl overflow-hidden mb-12">
+            <h2 class="text-2xl font-semibold text-center p-4 bg-gray-50">Interactive Dashboard Walkthrough</h2>
+            <!-- 
+              CHANGE: I'm using Tailwind's 'aspect-video' class to ensure a 
+              perfect 16:9 ratio for your widescreen video.
+            -->
+            <div class="w-full aspect-video">
+                <!-- 
+                  PASTE YOUR YOUTUBE EMBED LINK HERE
+                  (e.g., https://www.youtube.com/embed/YOUR_VIDEO_ID)
+                -->
+                <iframe 
+                    src="https://www.youtube.com/embed/Dd9GM3c5PI0" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    class="w-full h-full">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Project Details Section -->
+        <div class="w-full max-w-4xl bg-white rounded-lg shadow-2xl p-6 md:p-8 mb-12">
+            <h2 class="text-2xl font-semibold mb-6 border-b pb-2">Project Summary & Key Accomplishments</h2>
+            <p class="text-base text-gray-700 mb-6">
+                Developed a comprehensive, multi-page Power BI dashboard to analyze the 50 key characters of the Mahabharata, transforming qualitative narrative data into measurable, interactive insights on character influence, factional strength, and ultimate fate.
+            </p>
+            <ul class="project-bullets text-base text-gray-700">
+                <li>
+                    <strong>Data Transformation (ETL):</strong> Cleaned and transformed raw, unstructured text in Power Query; used conditional logic to group diverse entries (e.g., "Killed by Bhima") into a single "Killed in Battle" category and standardize various royal titles into a clean "Role" column.
+                </li>
+                <li>
+                    <strong>Data Modeling & DAX:</strong> Resolved data integrity issues by using <code>DISTINCT COUNT</code> measures, ensuring 100% accuracy in all KPIs and visuals after row-splitting transformations (like splitting <code>role</code>) had created duplicate entries.
+                </li>
+                <li>
+                    <strong>Interactive Dashboard & UX Design:</strong> Architected an intuitive, multi-page dashboard with drill-through capabilities; built a custom navigation system by linking a "View Profile" button to a slicer, replacing the default right-click menu to create a more user-friendly experience.
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Screenshot Gallery -->
+        <div class="w-full max-w-4xl">
+            <h2 class="text-2xl font-semibold text-center mb-6">Dashboard Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <h3 class="text-lg font-medium p-3 bg-gray-50 text-center">Main Dashboard</h3>
+                    <!-- 
+                      REPLACE THIS SRC with your screenshot of the main dashboard page
+                    -->
+                    <img src="image.png" alt="Main Dashboard Screenshot" class="border-t">
+                </div>
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <h3 class="text-lg font-medium p-3 bg-gray-50 text-center">Character Profile Page</h3>
+                    <!-- 
+                      REPLACE THIS SRC with your screenshot of the profile page
+                    -->
+                    <img src="image2.png" alt="Character Profile Screenshot" class="border-t">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
